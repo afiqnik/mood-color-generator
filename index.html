@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find a color palette that matches your mood.">
+  <title>Mood → Color Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="app-shell">
+    <header class="site-header">
+      <p class="eyebrow">A little color for how you feel</p>
+      <h1>Mood <span aria-hidden="true">→</span> Color Generator</h1>
+      <p class="intro">Choose a mood and discover a palette to match it.</p>
+    </header>
+
+    <section class="generator-panel" aria-labelledby="generator-title">
+      <h2 id="generator-title">What’s your mood?</h2>
+      <div class="controls">
+        <div class="field">
+          <label for="mood-select">Choose a mood</label>
+          <select id="mood-select" name="mood">
+            <option value="">Select a mood</option>
+            <option value="happy">Happy</option>
+            <option value="calm">Calm</option>
+            <option value="energetic">Energetic</option>
+            <option value="romantic">Romantic</option>
+            <option value="sad">Sad</option>
+            <option value="nature">Nature</option>
+            <option value="focused">Focused</option>
+            <option value="cozy">Cozy</option>
+          </select>
+        </div>
+        <div class="button-group">
+          <button id="generate-button" class="button button-primary" type="button">Generate palette</button>
+          <button id="reset-button" class="button button-secondary" type="button">Reset</button>
+        </div>
+      </div>
+      <p id="status-message" class="status-message" role="status" aria-live="polite">Select a mood to generate a
+        palette.</p>
+    </section>
+
+    <section id="palette-section" class="palette-section" aria-labelledby="palette-title" hidden>
+      <div class="palette-heading">
+        <div>
+          <p class="eyebrow">Your color combination</p>
+          <h2 id="palette-title">Your palette</h2>
+        </div>
+      </div>
+      <div id="palette-grid" class="palette-grid"></div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Built by Nik Afiq · <strong>Powered by Codyza</strong></p>
+    </footer>
+  </main>
+</body>
+
+</html>
